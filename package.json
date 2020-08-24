@@ -4,7 +4,7 @@
   "description": "Work with and sync values that have defined ranges.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha & standard"
+    "test": "npx mocha --reporter min --require esm & standard"
   },
   "repository": {
     "type": "git",

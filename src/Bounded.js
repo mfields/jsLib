@@ -1,9 +1,9 @@
 const { isNumber, makeInstanceOf } = require('./helpers.js')
 const { Interval } = require('./Interval.js')
 
-function Bounded () {
-  if (!(this instanceof Bounded)) {
-    return makeInstanceOf(Bounded, arguments)
+function BoundNumber () {
+  if (!(this instanceof BoundNumber)) {
+    return makeInstanceOf(BoundNumber, arguments)
   }
 
   var args = Array.prototype.slice.call(arguments)
@@ -31,11 +31,11 @@ function Bounded () {
   this.value = value
 }
 
-Bounded.prototype.has = function (n) {
+BoundNumber.prototype.has = function (n) {
   return isNumber(n) ? this.min <= n && n <= this.max : false
 }
 
-Bounded.prototype.project = function () {
+BoundNumber.prototype.project = function () {
   var v
   var a = this
   var b = parseInterval(arguments)
@@ -44,11 +44,11 @@ Bounded.prototype.project = function () {
     return this
   } else {
     v = ((a.value - a.min) * (b.max - b.min) / (a.max - a.min)) + b.min
-    return Bounded(v, b)
+    return BoundNumber(v, b)
   }
 }
 
-Bounded.prototype.valueOf = function () {
+BoundNumber.prototype.valueOf = function () {
   return this.value
 }
 
@@ -64,4 +64,4 @@ function parseInterval (args) {
   }
 }
 
-exports.Bounded = Bounded
+exports.BoundNumber = BoundNumber

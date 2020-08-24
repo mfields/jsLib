@@ -43,7 +43,7 @@ Bounded.prototype.project = function () {
   if (a.min === b.min && a.max === b.max) {
     return this
   } else {
-    v = ((a.value - a.min) * (b.max - b.min) / (a.max - a.min) ) + b.min
+    v = ((a.value - a.min) * (b.max - b.min) / (a.max - a.min)) + b.min
     return Bounded(v, b)
   }
 }
@@ -53,7 +53,7 @@ Bounded.prototype.valueOf = function () {
 }
 
 function parseInterval (args) {
-  if (args.length === 2 ) {
+  if (args.length === 2) {
     return Interval(args[0], args[1])
   } else if (args.length === 1 && args[0] instanceof Interval) {
     return args[0]

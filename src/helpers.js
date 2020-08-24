@@ -4,7 +4,8 @@ function isNumber (n) {
 
 function makeInstanceOf (constructor, args) {
   args = Array.prototype.slice.call(args)
-  return new (Function.prototype.bind.apply(constructor, [null].concat(args)))
+  var Maker = Function.prototype.bind.apply(constructor, [null].concat(args))
+  return new Maker()
 }
 
 module.exports = { isNumber, makeInstanceOf }

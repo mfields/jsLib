@@ -1,5 +1,5 @@
-const { isNumber, makeInstanceOf } = require('./helpers.js')
-const { Interval } = require('./Interval.js')
+import { isNumber, makeInstanceOf } from './helpers.js'
+import { Interval } from './Interval.js'
 
 function BoundNumber () {
   if (!(this instanceof BoundNumber)) {
@@ -64,4 +64,4 @@ function parseInterval (args) {
   }
 }
 
-exports.BoundNumber = BoundNumber
+export { BoundNumber }

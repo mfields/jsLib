@@ -1,4 +1,4 @@
-const { BoundNumber } = require('./src/BoundNumber.js')
-const { Interval } = require('./src/Interval.js')
+import { BoundNumber } from './src/BoundNumber.js'
+import { Interval } from './src/Interval.js'
 
-module.exports = { BoundNumber, Interval }
+export { BoundNumber, Interval }

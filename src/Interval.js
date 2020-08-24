@@ -1,4 +1,4 @@
-const { isNumber, makeInstanceOf } = require('./helpers.js')
+import { isNumber, makeInstanceOf } from './helpers.js'
 
 /**
  * Interval.
@@ -33,4 +33,4 @@ Interval.prototype.isFinite = function () {
   return (isFinite(this.min) && isFinite(this.max))
 }
 
-exports.Interval = Interval
+export { Interval }

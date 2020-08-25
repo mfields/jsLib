@@ -1,3 +1,5 @@
+import { makeInstanceOf } from './.internal/makeInstanceOf.js'
+
 /**
  * Construct a general tree.
  *
@@ -11,7 +13,7 @@
  */
 function Tree (config) {
   if (!(this instanceof Tree)) {
-    return new Tree(config)
+    return makeInstanceOf(Tree, arguments)
   }
 
   config = castObject(config)

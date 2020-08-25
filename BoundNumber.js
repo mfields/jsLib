@@ -36,7 +36,7 @@ function BoundNumber () {
 }
 
 BoundNumber.prototype.has = function (n) {
-  return isNumber(n) ? this.min <= n && n <= this.max : false
+  return this._interval.has(n)
 }
 
 BoundNumber.prototype.project = function () {

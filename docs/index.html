@@ -7,12 +7,33 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <style>
+    #main code {
+      background-color: #eee;
+    }
+    #main table td,
+    #main table th {
+      vertical-align: top;
+    }
+    #main table td code,
+    #main table th code {
+      background-color: transparent;
+    }
+    #main h2 code {
+      background-color: inherit;
+      color: inherit;
+      font-family: inherit;
+      font-size: 1em;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      repo: 'https://github.com/mfields/jsLib'
+      repo: 'https://github.com/mfields/jsLib',
+      auto2top: true,
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>

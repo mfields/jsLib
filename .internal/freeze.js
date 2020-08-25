@@ -2,13 +2,15 @@
  * Recursively freeze an object.
  *
  * @arg {object} o - The object to freeze.
- * @arg {function} skip - Do not freeze instances of this constructor.
+ * @arg {function} [skip] - Do not freeze instances of this constructor.
  * @return undefined
  */
 export function freeze (o, skip) {
   if (typeof o !== 'object') {
     return
   }
+
+  skip = typeof skip === 'function' ? skip : function () {}
 
   Object.getOwnPropertyNames(o).forEach(function (key) {
     var value = o[key]

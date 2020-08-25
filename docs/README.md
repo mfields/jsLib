@@ -8,7 +8,7 @@ A collection of JavaScript functions.
 
 ## Installation
 
-```
+```js
 npm install @mfields/lib
 ```
 
@@ -17,49 +17,7 @@ npm install @mfields/lib
 ### BoundNumber
 
 ### Interval
+Constructor function which creates immutable interval instances. [Read more about Interval](/Interval)
 
 ### Tree
 Constructor function which creates immutable general tree instances. [Read more about Tree](/Tree)
-
-
-###  Interval()
-
-#### Syntax
-```
-Interval(i)
-```
-
-##### Parameters
-| Name  | Type     | Default   | Description
-| ----- | -------- | --------- | -----------
-| `i`   | `string` | `""`      | String representation of an interval using [interval notation](https://www.ck12.org/algebra/intervals-and-interval-notation/lesson/intervals-and-interval-notation-calc/)
-
-###### Properties
-
-| Name     | Type     | Default | Description
-| -------- | -------- | ------- | -----------
-| `min`    | `number` | `0`     | The lower bound
-| `max`    | `number` | `0`     | The upper bound
-| `length` | `number` | `0`     | The quantity of values
-
-#### Examples
-
-##### Closed interval
-```
-var i = Interval('[3,7]')
-```
-
-##### Open interval
-```
-var i = Interval('(3,7)')
-```
-
-##### Half-open interval
-```
-var i = Interval('(3,7]')
-```
-
-##### Half-closed interval
-```
-var i = Interval('[3,7)')
-```

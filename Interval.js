@@ -1,3 +1,4 @@
+import { freeze } from './.internal/freeze.js'
 import { isNumber } from './.internal/isNumber.js'
 import { makeInstanceOf } from './.internal/makeInstanceOf.js'
 
@@ -22,6 +23,8 @@ function Interval (min, max) {
 
   this.min = bounds[0]
   this.max = bounds[1]
+
+  freeze(this, Interval)
 }
 
 Interval.prototype.has = function (n) {

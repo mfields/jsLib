@@ -1,4 +1,5 @@
-import { isNumber, makeInstanceOf } from './helpers.js'
+import { isNumber } from './.internal/isNumber.js'
+import { makeInstanceOf } from './.internal/makeInstanceOf.js'
 
 /**
  * Interval.

@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const { Interval } = require('../src/Interval.js')
+const { Interval } = require('../Interval.js')
 
 describe('Interval()', () => {
   it('is a function.', () => {

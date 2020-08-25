@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const { BoundNumber } = require('../src/BoundNumber.js')
+const { BoundNumber } = require('../BoundNumber.js')
 
 describe('BoundNumber()', () => {
   it('is a function.', () => {

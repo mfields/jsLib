@@ -1,3 +1,4 @@
+import { freeze } from './.internal/freeze.js'
 import { isNumber } from './.internal/isNumber.js'
 import { makeInstanceOf } from './.internal/makeInstanceOf.js'
 import { Interval } from './Interval.js'
@@ -30,6 +31,8 @@ function BoundNumber () {
 
   this._interval = interval
   this.value = value
+
+  freeze(this, BoundNumber)
 }
 
 BoundNumber.prototype.has = function (n) {

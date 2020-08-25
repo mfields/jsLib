@@ -8,6 +8,16 @@ describe('BoundNumber()', () => {
   it('can be called without the "new" keyword.', () => {
     expect(() => { BoundNumber() }).not.to.throw()
   })
+  it('creates frozen instances.', () => {
+    expect(Object.isFrozen(BoundNumber())).to.equal(true)
+    if (typeof BoundNumber().__proto__ === 'object') {
+      expect(Object.isFrozen(BoundNumber().__proto__.test)).to.equal(true)
+    }
+  })
+  it('does not accidentally freeze the built-in Object prototype.', () => {
+    BoundNumber()
+    expect(Object.isFrozen(Object.prototype)).to.equal(false)
+  })
   it('creates a default instance when passed no parameters', () => {
     expect(BoundNumber().min).to.equal(-Infinity)
     expect(BoundNumber().max).to.equal(Infinity)

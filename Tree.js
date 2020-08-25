@@ -1,3 +1,4 @@
+import { freeze } from './.internal/freeze.js'
 import { makeInstanceOf } from './.internal/makeInstanceOf.js'
 
 /**
@@ -39,7 +40,7 @@ function Tree (config) {
     this[key] = value
   }, this)
 
-  freeze(this)
+  freeze(this, Tree)
 }
 /**
  * Add a subtree.
@@ -495,27 +496,6 @@ function cloneTree (tree, override) {
   })
 
   return Tree(props)
-}
-/**
- * Recursively freeze an object.
- *
- * @arg {*} o - The value to freeze.
- * @return undefined
- */
-function freeze (o) {
-  if (typeof o !== 'object') {
-    return
-  }
-
-  Object.getOwnPropertyNames(o).forEach(function (key) {
-    var value = o[key]
-    if (value && typeof value === 'object' && !(value instanceof Tree)) {
-      freeze(value)
-    }
-  })
-
-  Object.freeze(o)
-  Object.freeze(Object.getPrototypeOf(o))
 }
 function determineAncestry (tree, map, height) {
   tree = castObject(tree)

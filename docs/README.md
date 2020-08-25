@@ -1,20 +1,26 @@
-# @mfields/range.js
+# @mfields/lib
 
+A collection of JavaScript functions.
 
-This is a simple javascript library which allows the easy creation and syncing of _bound values_. In this context, a bound value is defined as a floating point number that has a definite upper and lower boundary. This project was inspired by a problem I faced in a canvas animation exercise:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-* There is a circle.
-* When the circle's z index increases the color should become darker.
-* When the circle's z index decreases the color should become lighter.
-* Z index is a number between -300 and 300.
-* The color brightness is a color between 10 and 100.
+## Installation
 
-While it wasn't very hard to figure out the math to accomplish this task, I really wished that _something_ existed that would make this a bit easier. I'm not sure if anyone will get much use out of this, but I had a lot of fun putting it together and learned a thing or 10 about javascript during the process.
+```
+npm install @mfields/lib
+```
 
-For the time being you can find hints about usage in the [test file](https://github.com/mfields/jsRange.js/blob/master/test/unit/main.js).
+## Modules
 
+### BoundNumber
 
-## API Documentation
+### Interval
+
+### Tree
+Constructor function which creates immutable general tree instances. [Read more about Tree](/Tree)
+
 
 ###  Interval()
 

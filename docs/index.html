@@ -6,25 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
   <style>
     #main code {
-      background-color: #eee;
+      background-color: #f7f7f7;
     }
-    #main table td,
-    #main table th {
-      vertical-align: top;
-    }
-    #main table td code,
-    #main table th code {
-      background-color: transparent;
-    }
-    #main h2 code {
-      background-color: inherit;
-      color: inherit;
-      font-family: inherit;
-      font-size: 1em;
-      padding: 0;
+    #main tr:nth-child(2n) {
+      background: #fff;
     }
   </style>
 </head>
@@ -32,10 +20,13 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
+      name: '@mfields/lib',
       repo: 'https://github.com/mfields/jsLib',
       auto2top: true,
+      maxLevel: 3
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-prism@latest/dist/docsify-prism.min.js"></script>
 </body>
 </html>

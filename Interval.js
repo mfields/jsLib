@@ -27,9 +27,6 @@ function Interval (min, max) {
 Interval.prototype.has = function (n) {
   return isNumber(n) ? this.min <= n && n <= this.max : false
 }
-Interval.prototype.isEmpty = function () {
-  return (this.min === null && this.max === null)
-}
 Interval.prototype.isFinite = function () {
   return (isFinite(this.min) && isFinite(this.max))
 }

@@ -26,11 +26,13 @@ function BoundNumber () {
     value = null
   }
 
-  Object.defineProperty(this, 'min', { get: function () { return interval.min } })
-  Object.defineProperty(this, 'max', { get: function () { return interval.max } })
-
-  this._interval = interval
   this.value = value
+  this.min = interval.min
+  this.max = interval.max
+
+  Object.defineProperty(this, '_interval', {
+    value: interval
+  })
 
   freeze(this, BoundNumber)
 }

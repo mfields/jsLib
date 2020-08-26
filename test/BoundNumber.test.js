@@ -20,10 +20,9 @@ describe('BoundNumber()', () => {
     expect(Object.isFrozen(Object.prototype)).to.equal(false)
   })
   it('has enumerable key: value, min, and max.', () => {
-    console.log(isSameScalarArray(
-      Object.keys(BoundNumber()),
-      ["value", "min", "max"])
-    )
+    var keys = Object.keys(BoundNumber())
+    var expected = ["value", "min", "max"]
+    expect(isSameScalarArray(keys, expected)).to.equal(true)
   })
   it('creates a default instance when passed no parameters', () => {
     expect(BoundNumber().min).to.equal(-Infinity)

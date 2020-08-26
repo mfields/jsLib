@@ -1,4 +1,5 @@
 const { expect } = require('chai')
+import { isSameScalarArray } from './helpers/general'
 const { BoundNumber } = require('../BoundNumber.js')
 
 describe('BoundNumber()', () => {
@@ -17,6 +18,12 @@ describe('BoundNumber()', () => {
   it('does not accidentally freeze the built-in Object prototype.', () => {
     BoundNumber()
     expect(Object.isFrozen(Object.prototype)).to.equal(false)
+  })
+  it('has enumerable key: value, min, and max.', () => {
+    console.log(isSameScalarArray(
+      Object.keys(BoundNumber()),
+      ["value", "min", "max"])
+    )
   })
   it('creates a default instance when passed no parameters', () => {
     expect(BoundNumber().min).to.equal(-Infinity)

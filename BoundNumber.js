@@ -3,6 +3,20 @@ import { isNumber } from './.internal/isNumber.js'
 import { makeInstanceOf } from './.internal/makeInstanceOf.js'
 import { Interval } from './Interval.js'
 
+/**
+ * Create a number that has an upper an lower bound.
+ *
+ * @arg {number} value - The number.
+ * @arg {number} min - The lower bound. The value will never fall below this number.
+ * @arg {number} max - The upper bound. The value will never rise above this number.
+ *
+ * @also
+ *
+ * @arg {number} value - The number.
+ * @arg {Interval|object} interval - An object that has a `min` and `max` property.
+ *
+ * @return BoundNumber
+ */
 function BoundNumber () {
   if (!(this instanceof BoundNumber)) {
     return makeInstanceOf(BoundNumber, arguments)

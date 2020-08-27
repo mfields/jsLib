@@ -524,4 +524,4 @@ function determineAncestry (tree, map, height) {
   return ancestry
 }
 
-exports.Tree = Tree
+export { Tree }

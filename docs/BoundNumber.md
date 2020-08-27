@@ -22,12 +22,10 @@ Each instance of `BoundNumber` contains the following enumerable properties.
 
 Creates a new instance of `BoundNumber`. This function may be called with or without the `new` operator.
 
-__Syntax 1__
+__Method Signature 1__
 ```js
 BoundNumber(value, min, max)
 ```
-
-__Syntax 1: Parameters__
 
 | Name  | Type   | Description
 | ----- | ------ | -----------
@@ -35,12 +33,10 @@ __Syntax 1: Parameters__
 | min   | number | The lower bound.
 | max   | number | The upper bound
 
-__Syntax 2__
+__Method Signature 2__
 ```js
 BoundNumber(value, interval)
 ```
-
-__Syntax 2: Parameters__
 
 | Name     | Type   | Description
 | -------- | ------ | -----------
@@ -141,7 +137,7 @@ Translate this BoundValue to a new interval. This method produces a new instance
 For example, if the orignal instance's value is 20 within the interval of `[0, 100]` and it is then _projected_ to the interval `[1, 10]`, the `value` property of the new instance wil be 2.
 
 
-#### Syntax 1
+#### Method Signature 1
 ```js
 bn.project(min, max)
 ```
@@ -151,12 +147,10 @@ bn.project(min, max)
 | min   | number | The lower bound of the new interval.
 | max   | number | The upper bound of the new interval
 
-__Syntax 2__
+#### Method Signature 2
 ```js
 bn.project(interval)
 ```
-
-__Syntax 2: Parameters__
 
 | Name     | Type   | Description
 | -------- | ------ | -----------

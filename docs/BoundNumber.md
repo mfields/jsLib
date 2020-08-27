@@ -141,9 +141,6 @@ Translate this BoundValue to a new interval. This method produces a new instance
 For example, if the orignal instance's value is 20 within the interval of `[0, 100]` and it is then _projected_ to the interval `[1, 10]`, the `value` property of the new instance wil be 2.
 
 
-
-`value` property has been converted to a new number that is proportional equal to the old value
-
 #### Syntax 1
 ```js
 bn.project(min, max)

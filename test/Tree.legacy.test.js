@@ -167,7 +167,7 @@ describe('Properties.', function () {
     })
   })
   describe('key', function () {
-    it(`is null when props.key is null.`, function () {
+    it('is null when props.key is null.', function () {
       expect(Tree({ key: null }).key).to.equal(null)
     })
     it('is a number when props.key is a valid number.', function () {
@@ -177,7 +177,7 @@ describe('Properties.', function () {
     it('is a string when props.key is a string.', function () {
       expect(Tree({ key: 'abc' }).key).to.equal('abc')
     })
-    it(`is null when props.key is of an unsupported type.`, function () {
+    it('is null when props.key is of an unsupported type.', function () {
       expect(Tree({ key: undefined }).key).to.equal(null)
       expect(Tree({ key: true }).key).to.equal(null)
       expect(Tree({ key: false }).key).to.equal(null)
@@ -188,7 +188,7 @@ describe('Properties.', function () {
     })
   })
   describe('parent', function () {
-    it(`is null when props.key is null.`, function () {
+    it('is null when props.key is null.', function () {
       expect(Tree({ parent: null }).parent).to.equal(null)
     })
     it('is a number when props.key is a valid number.', function () {
@@ -198,7 +198,7 @@ describe('Properties.', function () {
     it('is a string when props.key is a string.', function () {
       expect(Tree({ parent: 'abc' }).parent).to.equal('abc')
     })
-    it(`is null when props.key is of an unsupported type.`, function () {
+    it('is null when props.key is of an unsupported type.', function () {
       expect(Tree({ parent: undefined }).parent).to.equal(null)
       expect(Tree({ parent: true }).parent).to.equal(null)
       expect(Tree({ parent: false }).parent).to.equal(null)

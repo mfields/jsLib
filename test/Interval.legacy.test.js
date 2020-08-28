@@ -1,5 +1,5 @@
-const { expect } = require('chai')
-const { Interval } = require('../Interval.js')
+import { expect } from 'chai'
+import { Interval } from '../Interval.js'
 
 describe('Interval()', function () {
   it('is a function.', function () {

@@ -16,6 +16,9 @@
   },
   "author": "Michael Fields",
   "license": "MIT",
+  "keywords": [
+    "tree", "interval", "bound number"
+  ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "15.0.0",
     "@rollup/plugin-node-resolve": "9.0.0",

@@ -1,6 +1,6 @@
-const { expect } = require('chai')
-const { Tree } = require('../Tree.js')
-const { expectEmpty } = require('./helpers/expect.js')
+import { expect } from 'chai'
+import { Tree } from '../Tree.js'
+import { expectEmpty } from './helpers/expect.js'
 
 describe('Tree(props)', () => {
   it('may be a symbol.', () => {

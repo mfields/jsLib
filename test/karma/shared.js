@@ -1,4 +1,3 @@
-const { babel } = require('@rollup/plugin-babel')
 const commonjs = require('@rollup/plugin-commonjs')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
 
@@ -28,18 +27,7 @@ function legacyConfig () {
         options: {
           plugins: [
             commonjs(),
-            nodeResolve(),
-            babel({
-              babelHelpers: 'bundled',
-              exclude: [/node_modules/],
-              presets: [
-                ['@babel/preset-env', {
-                  corejs: '3.6',
-                  debug: true,
-                  useBuiltIns: 'usage'
-                }]
-              ]
-            })
+            nodeResolve()
           ]
         }
       }

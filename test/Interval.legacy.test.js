@@ -6,7 +6,7 @@ describe('Interval()', function () {
     expect(typeof Interval).to.equal('function')
   })
   it('can be called without the "new" keyword.', function () {
-    expect(() => { Interval() }).not.to.throw()
+    expect(function () { Interval() }).not.to.throw()
   })
   it('creates frozen instances.', function () {
     expect(Object.isFrozen(Interval())).to.equal(true)
@@ -21,7 +21,7 @@ describe('Interval()', function () {
 })
 describe('Interval(min)', function () {
   it('is optional', function () {
-    expect(() => { Interval() }).not.to.throw()
+    expect(function () { Interval() }).not.to.throw()
   })
   it('defaults to -Infinity', function () {
     expect(Interval().min).to.equal(-Infinity)
@@ -42,7 +42,7 @@ describe('Interval(min)', function () {
 })
 describe('Interval(min, max)', function () {
   it('is optional', function () {
-    expect(() => { Interval(123) }).not.to.throw()
+    expect(function () { Interval(123) }).not.to.throw()
   })
   it('defaults to Infinity', function () {
     expect(Interval(123).max).to.equal(Infinity)

@@ -7,7 +7,7 @@ describe('BoundNumber()', function () {
     expect(typeof BoundNumber).to.equal('function')
   })
   it('can be called without the "new" keyword.', function () {
-    expect(() => { BoundNumber() }).not.to.throw()
+    expect( function () { BoundNumber() }).not.to.throw()
   })
   it('creates frozen instances.', function () {
     expect(Object.isFrozen(BoundNumber())).to.equal(true)
@@ -32,7 +32,7 @@ describe('BoundNumber()', function () {
 })
 describe('BoundNumber(value)', function () {
   it('is optional', function () {
-    expect(() => { BoundNumber() }).not.to.throw()
+    expect(function () { BoundNumber() }).not.to.throw()
   })
   it('is null when undefined', function () {
     expect(BoundNumber().value).to.equal(null)

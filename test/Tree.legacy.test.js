@@ -3,7 +3,7 @@ import { Tree } from '../Tree'
 import { expectEmpty, expectTree } from './helpers/expect.js'
 import { pbt2, pbt3 } from './helpers/data.js'
 
-const N = null // Short name for null.
+var N = null // Short name for null.
 
 describe('Tree()', function () {
   it('is a function.', function () {

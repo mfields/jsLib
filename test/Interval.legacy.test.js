@@ -11,7 +11,7 @@ describe('Interval()', function () {
   it('creates frozen instances.', function () {
     expect(Object.isFrozen(Interval())).to.equal(true)
     if (typeof Interval().__proto__ === 'object') {
-      expect(Object.isFrozen(Interval().__proto__.test)).to.equal(true)
+      expect(Object.isFrozen(Interval().__proto__)).to.equal(true)
     }
   })
   it('does not accidentally freeze the built-in Object prototype.', function () {

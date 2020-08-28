@@ -12,7 +12,7 @@ describe('BoundNumber()', function () {
   it('creates frozen instances.', function () {
     expect(Object.isFrozen(BoundNumber())).to.equal(true)
     if (typeof BoundNumber().__proto__ === 'object') {
-      expect(Object.isFrozen(BoundNumber().__proto__.test)).to.equal(true)
+      expect(Object.isFrozen(BoundNumber().__proto__)).to.equal(true)
     }
   })
   it('does not accidentally freeze the built-in Object prototype.', function () {

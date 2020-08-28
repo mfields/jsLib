@@ -58,4 +58,8 @@ describe('Tree.fromArray(trees)', () => {
   it('may not be a symbol.', () => {
     expectEmpty(Tree.fromArray(Symbol()))
   })
+  it('may not be an object that is not an array.', function () {
+    expectEmpty(Tree.fromArray(new Map()))
+    expectEmpty(Tree.fromArray(new Set()))
+  })
 })

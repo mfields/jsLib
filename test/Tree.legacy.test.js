@@ -653,8 +653,6 @@ describe('Tree.fromArray(trees)', function () {
   it('may not be an object that is not an array.', function () {
     expectEmpty(Tree.fromArray({}))
     expectEmpty(Tree.fromArray(function () {}))
-    expectEmpty(Tree.fromArray(new Map()))
-    expectEmpty(Tree.fromArray(new Set()))
   })
   it('ignores trees with size less than 1.', function () {
     expectEmpty(Tree.fromArray([Tree(), Tree(), Tree()]))

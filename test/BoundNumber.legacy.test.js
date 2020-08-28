@@ -1,6 +1,6 @@
-const { expect } = require('chai')
+import { expect } from 'chai'
 import { isSameScalarArray } from './helpers/general'
-const { BoundNumber } = require('../BoundNumber.js')
+import { BoundNumber } from '../BoundNumber.js'
 
 describe('BoundNumber()', () => {
   it('is a function.', () => {

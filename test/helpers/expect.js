@@ -1,7 +1,7 @@
-const { expect } = require('chai')
-const { Tree } = require('../../Tree.js')
+import { expect } from 'chai'
+import { Tree } from '../../Tree.js'
 
-function expectClone (a, b) {
+export function expectClone (a, b) {
   expect(a instanceof Tree).to.equal(true)
   expect(b instanceof Tree).to.equal(true)
   expect(a === b).to.equal(false)
@@ -11,16 +11,14 @@ function expectClone (a, b) {
   expect(a.children).to.deep.equal(b.children)
 }
 
-function expectEmpty (tree) {
+export function expectEmpty (tree) {
   return expectTree(tree, null, null, 0, 0)
 }
 
-function expectTree (tree, key, parent, degree, size) {
+export function expectTree (tree, key, parent, degree, size) {
   expect(tree instanceof Tree).to.equal(true)
   expect(tree.key).to.equal(key)
   expect(tree.parent).to.equal(parent)
   expect(tree.children.length).to.equal(degree)
   expect(tree.size).to.equal(size)
 }
-
-module.exports = { expectClone, expectEmpty, expectTree }

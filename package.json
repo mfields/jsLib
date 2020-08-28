@@ -4,7 +4,11 @@
   "description": "A collection of JavaScript functions.",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha --reporter min --require esm & standard"
+    "test": "npx mocha --reporter min --require esm & standard",
+    "test:chrome": "karma start ./test/karma/chrome.js",
+    "test:ie": "karma start ./test/karma/ie.js",
+    "test:mac": "karma start ./test/karma/mac.js",
+    "test:win": "karma start ./test/karma/win.js"
   },
   "repository": {
     "type": "git",

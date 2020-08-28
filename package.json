@@ -1,7 +1,7 @@
 {
   "name": "@mfields/lib",
   "version": "1.0.0",
-  "description": "A colloection of JavaScript functions.",
+  "description": "A collection of JavaScript functions.",
   "main": "index.js",
   "scripts": {
     "test": "npx mocha --reporter min --require esm & standard"

@@ -4,6 +4,13 @@
   "description": "A collection of JavaScript functions.",
   "main": "index.js",
   "type": "module",
+  "files": [
+    "index.js",
+    ".internal/",
+    "BoundNumber.js",
+    "Interval.js",
+    "Tree.js"
+  ],
   "scripts": {
     "test": "npx mocha --reporter min & standard",
     "test:chrome": "karma start ./test/karma/chrome.cjs",

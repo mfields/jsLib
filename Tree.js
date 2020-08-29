@@ -1,5 +1,5 @@
 import { freeze } from './.internal/freeze.js'
-import { makeInstanceOf } from './.internal/makeInstanceOf.js'
+import { makeInstanceOf } from './makeInstanceOf.js'
 
 /**
  * Construct a general tree.

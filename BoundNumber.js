@@ -1,6 +1,6 @@
 import { freeze } from './.internal/freeze.js'
 import { isNumber } from './.internal/isNumber.js'
-import { makeInstanceOf } from './.internal/makeInstanceOf.js'
+import { makeInstanceOf } from './makeInstanceOf.js'
 import { Interval } from './Interval.js'
 
 /**

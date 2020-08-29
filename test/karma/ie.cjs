@@ -1,4 +1,4 @@
-const { legacyConfig } = require('./shared.js')
+const { legacyConfig } = require('./shared.cjs')
 
 module.exports = function (config) {
   const c = legacyConfig()

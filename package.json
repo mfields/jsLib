@@ -18,7 +18,9 @@
   "author": "Michael Fields",
   "license": "MIT",
   "keywords": [
-    "tree", "interval", "bound number"
+    "tree",
+    "interval",
+    "bound number"
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "15.0.0",

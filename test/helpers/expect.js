@@ -1,5 +1,7 @@
-import { expect } from 'chai'
+import chai from 'chai'
 import { Tree } from '../../Tree.js'
+
+var expect = chai.expect
 
 export function expectClone (a, b) {
   expect(a instanceof Tree).to.equal(true)

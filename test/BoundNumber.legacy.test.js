@@ -1,6 +1,8 @@
-import { expect } from 'chai'
-import { isSameScalarArray } from './helpers/general'
+import chai from 'chai'
+import { isSameScalarArray } from './helpers/general.js'
 import { BoundNumber } from '../BoundNumber.js'
+
+var expect = chai.expect
 
 describe('BoundNumber()', function () {
   it('is a function.', function () {

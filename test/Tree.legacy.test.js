@@ -1,8 +1,9 @@
-import { expect } from 'chai'
-import { Tree } from '../Tree'
+import chai from 'chai'
+import { Tree } from '../Tree.js'
 import { expectEmpty, expectTree } from './helpers/expect.js'
 import { pbt2, pbt3 } from './helpers/data.js'
 
+var expect = chai.expect
 var N = null // Short name for null.
 
 describe('Tree()', function () {

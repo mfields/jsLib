@@ -1,5 +1,7 @@
-import { expect } from 'chai'
+import chai from 'chai'
 import { Interval } from '../Interval.js'
+
+var expect = chai.expect
 
 describe('Interval()', function () {
   it('is a function.', function () {

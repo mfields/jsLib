@@ -1,6 +1,8 @@
-import { expect } from 'chai'
+import chai from 'chai
 import { Tree } from '../Tree.js'
 import { expectEmpty } from './helpers/expect.js'
+
+var expect = chai.expect
 
 describe('Tree(props)', () => {
   it('may be a symbol.', () => {

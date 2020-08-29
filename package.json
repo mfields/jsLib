@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "npx mocha --reporter min --require esm & standard",
+    "test": "npx mocha --reporter min & standard",
     "test:chrome": "karma start ./test/karma/chrome.cjs",
     "test:ie": "karma start ./test/karma/ie.cjs",
     "test:mac": "karma start ./test/karma/mac.cjs",
@@ -27,7 +27,6 @@
     "@rollup/plugin-node-resolve": "9.0.0",
     "chai": "4.2.0",
     "cz-conventional-changelog": "3.2.0",
-    "esm": "3.2.25",
     "karma": "5.1.1",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "3.1.0",

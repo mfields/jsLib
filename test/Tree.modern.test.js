@@ -1,4 +1,4 @@
-import chai from 'chai
+import chai from 'chai'
 import { Tree } from '../Tree.js'
 import { expectEmpty } from './helpers/expect.js'
 

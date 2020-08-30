@@ -9,7 +9,7 @@
     ".internal/",
     "BoundNumber.js",
     "Interval.js",
-    "makeInstanceOf",
+    "makeInstanceOf.js",
     "Tree.js"
   ],
   "scripts": {

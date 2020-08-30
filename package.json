@@ -12,6 +12,7 @@
     "Tree.js"
   ],
   "scripts": {
+    "release": "npx standard-version",
     "test": "npx mocha --reporter min & standard",
     "test:chrome": "karma start ./test/karma/chrome.cjs",
     "test:ie": "karma start ./test/karma/ie.cjs",
